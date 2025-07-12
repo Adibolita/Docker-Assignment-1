@@ -44,7 +44,7 @@ Reflection Questions
 	  docker logs shows me; for example 'getrlimit(RLIMIT_NOFILE): 1048576:1048576', but the errors helped me to find out what's about the issue. For instance when I checked 	logs I catch that there's an error:
 	172.17.0.1 - - [12/Jul/2025:14:49:39 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 	(KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" "-"
 	
-    At first I didn't understand what exactly is the issue, so I searched the error and I found out the browser looks for a favicon automatically and there isn't such a file in Nginx default html page. Therefore docker         logs helped me check how's the container running situation and helped me check if there are any errors in this process or not.
+    At first I didn't understand what exactly is the issue, so I searched the error and I found out the browser looks for a favicon automatically and there isn't such a file in Nginx default html page. Therefore docker logs helped me check how's the container running situation and helped me check if there are any errors in this process or not.
 
 _______________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -53,7 +53,7 @@ Challenges faced
 Error => 
 'getrlimit(RLIMIT_NOFILE): 1048576:1048576', but the errors helped me to find out what's about the issue. For instance when I checked 	logs I catch that there's an error:
 172.17.0.1 - - [12/Jul/2025:14:49:39 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 	(KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" "-"
-How I resolve it => Actually I didn't resolve it as far as I knew, that the problem was not made by me. However I could have replace the nginx default html page with a custom file and include a favicon in the html header tag and the problem would be resolved, but I don't think that was necessary for this assignment.
+How I resolve it => Actually I didn't resolve it becasue I knew the problem was not made by me. However I could have replace the nginx default html page with a custom file and include a favicon in the html header tag and the problem would be resolved, but I didn't do that because I think that was not necessary for this assignment.
 
 _______________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
